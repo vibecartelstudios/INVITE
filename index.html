@@ -1,0 +1,123 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritika's First Holy Communion</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Screenshot 2025-12-15 200129.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <!-- SECTION 1 -->
+  <section class="section section-1 reveal">
+    <div class="card">
+      <div class="icon">
+        <i class="fa-duotone fa-solid fa-dove"></i>
+      </div>
+
+
+      <h1>First Holy Communion</h1>
+      <h2>With Hearts Full of Faith & Joy</h2>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section section-2 reveal">
+    <div class="card">
+      <p class="details"><h2>We joyfully invite you to celebrate</h2></p>
+      <div class="name"><h1>Ritika's First Holy Communion</h1></div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="section section-3 reveal">
+    <div class="card">
+      
+      
+      <p class="details">
+        <span><h2>DATE:</h2></span><h1> Sunday, 18th January 2026</h1><br>
+        <span><h2>TIME:</h2></span> <h1>11:30</h1><br>
+        <span><h2>VENUE:</h2></span> <h1> Rotary Club, Ambernath</h1><a 
+  href="https://maps.app.goo.gl/ah917ioebTr9twfN7"
+  target="_blank"
+  class="map-button"
+>
+  <i class="fa-solid fa-location-dot"></i>
+  View Venue on Map
+</a>
+
+
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="section section-4 reveal">
+    <div class="card">
+      <p class="verse">
+        <h2>“I am the bread of life. Whoever comes to me will never be hungry.”</h2><br>
+        – John 6:35
+      </p>
+
+      
+
+      <footer>
+        <h2>Hosted with love by</h2><br>
+        <strong><a
+      href="https://wa.me/919112220600?text=Blessings%20to%20Ritika%20on%20her%20First%20Holy%20Communion"
+      target="_blank"
+      class="whatsapp-button"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      Devashish Shelke
+       <a
+      href="https://wa.me/919004914286?text=Blessings%20to%20Ritika%20on%20her%20First%20Holy%20Communion"
+      target="_blank"
+      class="whatsapp-button"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      Anita Shelke
+    </a>
+    <a
+      href="https://wa.me/919322723436?text=Blessings%20to%20Ritika%20on%20her%20First%20Holy%20Communion"
+      target="_blank"
+      class="whatsapp-button"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      Aditya Shelke
+    </a>
+    </a>
+
+    <br></strong>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Scroll script -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

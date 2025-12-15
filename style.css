@@ -1,0 +1,202 @@
+/* full screen scroll sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  transition: background-image 1.5s ease;
+}
+
+/* make section backgrounds transparent so gradient is visible */
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+  background: transparent;
+}
+
+/* universal h1 heading color for visibility */
+h1 {
+  color: #ffd700; /* bright gold */
+  text-shadow: 3px -5px 6px rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.card h1 {
+  /* remove previous color to avoid conflict */
+}
+
+.cross{
+    size: 100px;
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* floating radial blobs */
+.blob {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: -1;
+  animation: float 25s infinite ease-in-out;
+}
+
+.blob1 {
+  background: #d9c9a6;
+  top: 10%;
+  left: -120px;
+}
+
+.blob2 {
+  background: #bfbfbf;
+  bottom: 15%;
+  right: -120px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+
+.card,
+.content,
+.details,
+.verse,
+footer,
+h2,
+.name {
+  text-align: center;
+}
+
+.icon {
+  font-size: 70px;
+  color: #a56f1f;
+  margin-bottom: 20px;
+  text-shadow: 3px -5px 6px rgb(0, 0, 0);
+  animation: glow 3s infinite ease-in-out;
+}
+
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  margin-top: 20px;
+
+  background: linear-gradient(135deg, #a56f1f, #d6b46a);
+  color: #ffffff;
+  box-shadow: 3px -5px 6px rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 35px;
+
+  box-shadow: 0 10px 25px rgba(165, 111, 31, 0.35);
+  transition: all 0.35s ease;
+}
+
+.map-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 3px -5px 6px rgb(0, 0, 0);
+}
+
+.map-button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 600px) {
+  .map-button {
+    font-size: 15px;
+    padding: 13px 28px;
+  }
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 34px;
+  margin: 12px;
+
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 35px;
+  box-shadow: 0 10px 25px rgba(18, 140, 126, 0.35);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-button i {
+  font-size: 18px;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(18, 140, 126, 0.45);
+}
+
+.whatsapp-button:active {
+  transform: scale(0.96);
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .whatsapp-button {
+    font-size: 15px;
+    padding: 13px 28px;
+  }
+}
+
+/* ========================= */
+/* Darker moving gradient background (purple, red, blue) */
+/* ========================= */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2; /* behind all content */
+  background: linear-gradient(270deg, #ffffff, #a56f1f, #000); /* dark purple, red, blue */
+  background-size: 600% 600%;
+  animation: gradientShift 30s ease infinite;
+  opacity: 0.7; /* more visible */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.verse {
+    padding-top: 50px;
+}
