@@ -129,9 +129,25 @@
 
     reveals.forEach(el => observer.observe(el));
   </script>
+<script>
+  let userScrolled = false;
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (!userScrolled) {
+        window.scrollBy({ top: 80, behavior: 'smooth' });
+      }
+    }, 1200);
+  });
+
+  window.addEventListener('scroll', () => {
+    userScrolled = true;
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
