@@ -30,7 +30,7 @@ h1 {
 }
 
 .card h1 {
-  /* remove previous color to avoid conflict */
+  color: #fcbe03;
 }
 
 .cross{
@@ -235,6 +235,7 @@ body::after {
     padding-top: 50px;
 
 }
+
 
 
 
