@@ -87,6 +87,33 @@ h2,
 .name {
   text-align: center;
 }
+.scroll-hint {
+  position: absolute;
+  bottom: 25px;
+  width: 28px;
+  height: 45px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
+}
+
+.scroll-hint::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 4px;
+  transform: translateX(-50%);
+  animation: scrollDot 1.6s infinite;
+}
+
+@keyframes scrollDot {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 15px); }
+}
 
 .icon {
   font-size: 70px;
@@ -206,5 +233,6 @@ body::after {
     padding-top: 50px;
 
 }
+
 
 
